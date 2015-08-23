@@ -7,13 +7,13 @@ The script run_analytics.R uses the following steps to clean up and produce the 
 1. loads libraries (data.table and plyr)
 2. sets the location of the source data
 3. reads the source data in three areas
-  a. Subject Files
-  b. Activity files
-  c. Data files
+  * Subject Files
+  * Activity files
+  * Data files
 4. Combines the data sets
 5. creates a feature list, to be used for column names
 6. pattern match the desired columns
-  a.restrict dataset and make the names more readable
+  * restrict dataset and make the names more readable
 7. Gets the activities and assign to data set for more readable names
 8. writes out TidyData.txt
 9. Creates summary data set (TidyDataSummary.txt)
