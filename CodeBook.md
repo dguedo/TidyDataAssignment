@@ -2,10 +2,25 @@ Getting and Cleaning Data : Code Book
 =====================================
 
 ## run_analytics.R
+The script run_analytics.R uses the following steps to clean up and produce the following two data files
 
+1. loads libraries (data.table and plyr)
+2. sets the location of the source data
+3. reads the source data in three areas
+  a. Subject Files
+  b. Activity files
+  c. Data files
+4. Combines the data sets
+5. creates a feature list, to be used for column names
+6. pattern match the desired columns
+  a.restrict dataset and make the names more readable
+7. Gets the activities and assign to data set for more readable names
+8. writes out TidyData.txt
+9. Creates summary data set (TidyDataSummary.txt)
+10. writes out  TidyDataSummary.txt
 
 ## TidyData.txt
-data.frame':	10299 obs. of  68 variables:
+TidyData data set containd:	10299 observations of 68 variables
 
 ```r
  $ subject                    : int  2 2 2 2 2 2 2 2 2 2 ...
@@ -80,8 +95,9 @@ data.frame':	10299 obs. of  68 variables:
 
 
 ## TidyDataSummary.txt
-summary  data.frame':	180 obs. of  68 variables:
+TidyData data set containd:	180 observations of 68 variables
 
+```r
  $ subject                         : int  1 1 1 1 1 1 2 2 2 2 ...
  $ activity                        : Factor w/ 6 levels "LAYING","SITTING",..: 1 2 3 4 5 6 1 2 3 4 ...
  $ tbodyacc-mean()-x_mean          : num  0.222 0.261 0.279 0.277 0.289 ...
@@ -150,3 +166,4 @@ summary  data.frame':	180 obs. of  68 variables:
  $ fbodybodygyromag-std()_mean     : num  -0.824 -0.932 -0.978 -0.321 -0.398 ...
  $ fbodybodygyrojerkmag-mean()_mean: num  -0.942 -0.99 -0.995 -0.319 -0.282 ...
  $ fbodybodygyrojerkmag-std()_mean : num  -0.933 -0.987 -0.995 -0.382 -0.392 ...
+ ```
